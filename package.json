@@ -1,0 +1,43 @@
+{
+  "name": "reactjs_assign",
+  "version": "1.0.0",
+  "description": "ES6, NodeJS, Git, and React Assignment",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nearjay06/reactjs_blog.git"
+  },
+  "keywords": [
+    "Blog",
+    "App"
+  ],
+  "author": "Joan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nearjay06/reactjs_blog/issues"
+  },
+  "homepage": "https://github.com/nearjay06/reactjs_blog#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.4.2",
+    "axios": "^0.19.0",
+    "moment": "^2.24.0",
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-render-html": "^0.6.0",
+    "react-router-dom": "^5.0.1",
+    "sweetalert2": "^8.17.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
+    "npm-install-webpack-plugin": "^4.0.5"
+  }
+}
