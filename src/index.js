@@ -1,41 +1,37 @@
 import React from "react";
 import REACTDOM from "react-dom";
-import './style/style.css'
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import './style/style.css';
+import Register from './components/register'
+// import { get } from 'axios';
 
 
 class App extends React.Component{
-    render(){
+   render(){
         return (
-            <div> Hello, welcome to the Blog.</div>
-        )
-    }
-
-}
-    
-class Content extends React.Component{
-    // constructor(props){
-    //     super(props);
-    //     this.state = {
+            <div>
+             <header>   
+            <h1> Hello, welcome to the blog.
+                Create an account.</h1>
+                </header>
             
-    //     }
-    // }
-    render(){
-        return (
+            <Register />
             
-        )
-    }
 
-}
-    
+        
+        </div>
 
+        );
+     }
+  }
 
-
-
-
-
-
-export default Content;
+export default App;
 REACTDOM.render(<App />, document.querySelector("#book"));
+// ReactDOM.render(<Register/>, document.getElementByID("#book"));
+
+
+
+    
+      
+       
+    
+   

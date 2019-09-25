@@ -1,2 +1,56 @@
 body{
-    background-color: papayawhip;}
+    background-color: rgb(193, 172, 211);}
+
+h1{
+    font-family: cambria;
+    font-size: 30px;
+    text-align: center;
+    color:rgb(37, 75, 109);
+} 
+
+button{
+    border:1px solid gray ;
+    border-radius:12px;
+    padding:10px;
+    background-color:rgb(98, 138, 219);
+    width: 30%;
+    font-size:16px;
+    margin-top:15px;
+    margin-left:60px;
+   
+
+}
+
+form{
+    padding-left:400px;
+    
+}
+
+p{
+    font-family:cambria;
+    font-weight:bolder;
+    font-size:30px;
+    padding-top:2px;
+    padding-left:200px;
+    color:rgb(37, 75, 109);
+}
+
+.form-control{
+    background-color:rgb(176, 221, 223);
+    padding:10px; 
+    width:50%;
+    border:1px solid gray;
+    border-radius:10px;
+    
+}
+
+label{
+    font-family:cambria;
+    font-weight:bolder;
+    font-size:20px;
+    color:rgb(37, 75, 109);
+    margin-left:10px;
+    
+    
+}
+

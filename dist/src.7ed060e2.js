@@ -30681,7 +30681,39 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/index.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/components/login.js":[function(require,module,exports) {
+// import React from "react";
+// import REACTDOM from "react-dom";
+// class Login extends Component {
+//     constructor(props){ 
+//       super(props);
+//       this.state={
+//       username:'',
+//       password:''
+//       }
+//      };
+//     render() {
+//          return (
+//            <div className="signin">
+//              <form>
+//              <p>Login Here</p>
+//              <label htmlFor="user">Username</label> <br/>
+//                     <input className="form-control" type="input" name="username" 
+//                     value={this.setState.username}
+//                     onInput={this.inputUpdated} /><br/>
+//               <label htmlFor="pass">Password</label> <br/>
+//                     <input className="form-control" type="input" name="password" 
+//                     value={this.setState.password}
+//                     onInput={this.inputUpdated} /> <br/>
+//               <button type="submit" className='btn-success'>Login</button>
+//               </form>
+//            </div>
+//          );
+//        }
+//      }
+// export default Login;
+// REACTDOM.render(<App/>, document.querySelector("#book"));
+},{}],"../src/components/register.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30693,7 +30725,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-require("./style/style.css");
+var _login = _interopRequireDefault(require("../components/login"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30715,9 +30747,132 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-// import AppBar from '@material-ui/core/AppBar';
-// import Toolbar from '@material-ui/core/Toolbar';
-// import Typography from '@material-ui/core/Typography';
+var Register =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Register, _React$Component);
+
+  function Register(props) {
+    var _this;
+
+    _classCallCheck(this, Register);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Register).call(this, props));
+    _this.state = {
+      firstname: " ",
+      lastname: " ",
+      username: " ",
+      email: " ",
+      password: " ",
+      confirmpassword: " "
+    };
+    return _this;
+  }
+
+  _createClass(Register, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        className: "sign"
+      }, _react.default.createElement("form", {
+        onSubmit: this.props.Login
+      }, _react.default.createElement("p", null, "SignUp Here"), _react.default.createElement("label", {
+        htmlFor: "first"
+      }, "First Name"), _react.default.createElement("br", null), _react.default.createElement("input", {
+        className: "form-control",
+        type: "input",
+        name: "firstname",
+        value: this.state.firstname,
+        onInput: this.inputUpdated
+      }), _react.default.createElement("br", null), _react.default.createElement("label", {
+        htmlFor: "last"
+      }, "Last Name"), " ", _react.default.createElement("br", null), _react.default.createElement("input", {
+        className: "form-control",
+        type: "input",
+        name: "lastname",
+        value: this.state.lastname,
+        onInput: this.inputUpdated
+      }), " ", _react.default.createElement("br", null), _react.default.createElement("label", {
+        htmlFor: "user"
+      }, "Username"), " ", _react.default.createElement("br", null), _react.default.createElement("input", {
+        className: "form-control",
+        type: "input",
+        name: "username",
+        value: this.state.username,
+        onInput: this.inputUpdated
+      }), _react.default.createElement("br", null), _react.default.createElement("label", {
+        htmlFor: "useremail"
+      }, "Email"), " ", _react.default.createElement("br", null), _react.default.createElement("input", {
+        className: "form-control",
+        type: "input",
+        name: "email",
+        value: this.state.email,
+        onInput: this.inputUpdated
+      }), _react.default.createElement("br", null), _react.default.createElement("label", {
+        htmlFor: "pass"
+      }, "Password"), " ", _react.default.createElement("br", null), _react.default.createElement("input", {
+        className: "form-control",
+        type: "input",
+        name: "password",
+        value: this.state.password,
+        onInput: this.inputUpdated
+      }), " ", _react.default.createElement("br", null), _react.default.createElement("label", {
+        htmlFor: "confirm"
+      }, "Confirm Password"), " ", _react.default.createElement("br", null), _react.default.createElement("input", {
+        className: "form-control",
+        type: "input",
+        name: "confirmpassword",
+        value: this.state.confirmpassword,
+        onInput: this.inputUpdated
+      }), " ", _react.default.createElement("br", null), _react.default.createElement("button", {
+        type: "submit",
+        className: "btn-success"
+      }, "Submit")));
+    }
+  }]);
+
+  return Register;
+}(_react.default.Component);
+
+var _default = Register;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","../components/login":"../src/components/login.js"}],"../src/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+require("./style/style.css");
+
+var _register = _interopRequireDefault(require("./components/register"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+// import { get } from 'axios';
 var App =
 /*#__PURE__*/
 function (_React$Component) {
@@ -30732,44 +30887,18 @@ function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, " Hello, welcome to the Blog.");
+      return _react.default.createElement("div", null, _react.default.createElement("header", null, _react.default.createElement("h1", null, " Hello, welcome to the blog. Create an account.")), _react.default.createElement(_register.default, null));
     }
   }]);
 
   return App;
 }(_react.default.Component);
 
-var Content =
-/*#__PURE__*/
-function (_React$Component2) {
-  _inherits(Content, _React$Component2);
-
-  function Content() {
-    _classCallCheck(this, Content);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Content).apply(this, arguments));
-  }
-
-  _createClass(Content, [{
-    key: "render",
-    // constructor(props){
-    //     super(props);
-    //     this.state = {
-    //     }
-    // }
-    value: function render() {
-      return _react.default.createElement("div", null, " Hello, welcome to the Blog.");
-    }
-  }]);
-
-  return Content;
-}(_react.default.Component);
-
-var _default = Content;
+var _default = App;
 exports.default = _default;
 
-_reactDom.default.render(_react.default.createElement(App, null), document.querySelector("#book"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./style/style.css":"../src/style/style.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(App, null), document.querySelector("#book")); // ReactDOM.render(<Register/>, document.getElementByID("#book"));
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./style/style.css":"../src/style/style.css","./components/register":"../src/components/register.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -30797,7 +30926,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45103" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38763" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
